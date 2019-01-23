@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hWT-Jg-rtP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Changing Constraints View Controller-->
+        <scene sceneID="bvT-HH-P1G">
+            <objects>
+                <viewController id="hWT-Jg-rtP" customClass="ChangingConstraintsViewController" customModule="ChangingConstraints" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aDR-TF-hfV"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Lh-bo-iJZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HaP-Kt-WHB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZ7-Kb-SvR">
+                                <rect key="frame" x="66" y="220" width="243" height="150"/>
+                                <color key="backgroundColor" red="0.26626920339999999" green="1" blue="0.23779060939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="NSX-ex-SFt"/>
+                                    <constraint firstAttribute="width" constant="243" id="du0-5j-dgY"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ytx-JG-eZU">
+                                <rect key="frame" x="161" y="433" width="53" height="30"/>
+                                <state key="normal" title="Change"/>
+                                <connections>
+                                    <action selector="clickButton:" destination="hWT-Jg-rtP" eventType="touchUpInside" id="tTV-K8-IFA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jZ7-Kb-SvR" firstAttribute="top" secondItem="aDR-TF-hfV" secondAttribute="bottom" constant="200" id="4Ok-j2-sDE"/>
+                            <constraint firstItem="6Lh-bo-iJZ" firstAttribute="top" secondItem="Ytx-JG-eZU" secondAttribute="bottom" constant="204" id="HNs-rT-pho"/>
+                            <constraint firstItem="Ytx-JG-eZU" firstAttribute="centerX" secondItem="HaP-Kt-WHB" secondAttribute="centerX" id="L8N-aO-9Q4"/>
+                            <constraint firstItem="jZ7-Kb-SvR" firstAttribute="centerX" secondItem="HaP-Kt-WHB" secondAttribute="centerX" id="ZtU-py-1EU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="topContrain" destination="4Ok-j2-sDE" id="iHi-De-YhZ"/>
+                        <outlet property="withGreenView" destination="du0-5j-dgY" id="hPk-HV-W4N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xgz-RQ-lM3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2070" y="64"/>
+        </scene>
+    </scenes>
+</document>
