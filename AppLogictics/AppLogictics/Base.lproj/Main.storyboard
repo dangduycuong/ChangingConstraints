@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AppLogictics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W1o-vQ-6Hf">
+                                <rect key="frame" x="153.5" y="423" width="107.5" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XC-Ir-8mk">
+                                        <rect key="frame" x="8" y="0.0" width="41.5" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWI-8G-s6K">
+                                        <rect key="frame" x="0.0" y="0.0" width="107.5" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="meowClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eww-aQ-04w"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Symbol" translatesAutoresizingMaskIntoConstraints="NO" id="ro0-aU-adL">
+                                        <rect key="frame" x="57.5" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="xsg-Nt-3gX"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="9XC-Ir-8mk" firstAttribute="leading" secondItem="W1o-vQ-6Hf" secondAttribute="leading" constant="8" id="2W5-Ik-u09"/>
+                                    <constraint firstItem="aWI-8G-s6K" firstAttribute="leading" secondItem="W1o-vQ-6Hf" secondAttribute="leading" id="L0T-um-6aI"/>
+                                    <constraint firstItem="9XC-Ir-8mk" firstAttribute="top" secondItem="W1o-vQ-6Hf" secondAttribute="top" id="Mu5-Vy-mAk"/>
+                                    <constraint firstAttribute="bottom" secondItem="aWI-8G-s6K" secondAttribute="bottom" id="Omu-GB-uRP"/>
+                                    <constraint firstItem="ro0-aU-adL" firstAttribute="top" secondItem="W1o-vQ-6Hf" secondAttribute="top" id="WhM-jG-wBI"/>
+                                    <constraint firstAttribute="height" constant="50" id="Ygk-8H-BgP"/>
+                                    <constraint firstItem="aWI-8G-s6K" firstAttribute="top" secondItem="W1o-vQ-6Hf" secondAttribute="top" id="fCH-5x-a0D"/>
+                                    <constraint firstAttribute="bottom" secondItem="ro0-aU-adL" secondAttribute="bottom" id="fqC-mo-gAu"/>
+                                    <constraint firstAttribute="trailing" secondItem="ro0-aU-adL" secondAttribute="trailing" id="h0v-Hw-ent"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="50" id="hBK-93-s8g"/>
+                                    <constraint firstAttribute="bottom" secondItem="9XC-Ir-8mk" secondAttribute="bottom" id="i9l-OA-Nk6"/>
+                                    <constraint firstItem="ro0-aU-adL" firstAttribute="leading" secondItem="9XC-Ir-8mk" secondAttribute="trailing" constant="8" id="kM1-vQ-J2W"/>
+                                    <constraint firstAttribute="trailing" secondItem="aWI-8G-s6K" secondAttribute="trailing" id="zAN-f0-KA0"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Awk-8B-3CC">
+                                <rect key="frame" x="16" y="367" width="382" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="UdF-I5-K0d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Awk-8B-3CC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="N1Z-UF-dVS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Awk-8B-3CC" secondAttribute="trailing" constant="16" id="feG-Wg-NMe"/>
+                            <constraint firstItem="W1o-vQ-6Hf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gkO-BM-TI5"/>
+                            <constraint firstItem="W1o-vQ-6Hf" firstAttribute="top" secondItem="Awk-8B-3CC" secondAttribute="bottom" constant="16" id="o1j-7d-Lv3"/>
+                            <constraint firstItem="W1o-vQ-6Hf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wtC-8j-lyZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="meowButton" destination="aWI-8G-s6K" id="tGb-eb-Crg"/>
+                        <outlet property="phoneTextField" destination="Awk-8B-3CC" id="5F6-jg-Ypf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Symbol" width="300" height="300"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

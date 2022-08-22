@@ -28,6 +28,10 @@ class MasterViewController: UIViewController {
         listPerson.append(item)
         detail = listPerson[0]
 //        listPerson.remove(at: 0)
+        
+        if let s = UserDefaults.standard.string(forKey: "okok") as? String {
+            title = s
+        }
     }
     
     

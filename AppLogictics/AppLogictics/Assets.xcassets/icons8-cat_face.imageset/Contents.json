@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "icons8-cat_face.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "hoaHong.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },

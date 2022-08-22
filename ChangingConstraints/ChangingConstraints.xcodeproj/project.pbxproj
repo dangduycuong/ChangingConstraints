@@ -13,6 +13,7 @@
 		CEFD2D9521F85D7B00FE5A0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEFD2D9421F85D7B00FE5A0A /* Assets.xcassets */; };
 		CEFD2D9821F85D7B00FE5A0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFD2D9621F85D7B00FE5A0A /* LaunchScreen.storyboard */; };
 		CEFD2DA321F85D7B00FE5A0A /* ChangingConstraintsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD2DA221F85D7B00FE5A0A /* ChangingConstraintsTests.swift */; };
+		FA48000D28B36F5C009FCC29 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA48000C28B36F5C009FCC29 /* CameraVC.swift */; };
 		FA88B3C028AFFEED00EE90E6 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88B3BF28AFFEED00EE90E6 /* MasterViewController.swift */; };
 		FAC0276B28B26C5800AD0CC9 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0276A28B26C5800AD0CC9 /* AlertViewController.swift */; };
 		FAC0276E28B26ED800AD0CC9 /* NotificationName+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0276D28B26ED800AD0CC9 /* NotificationName+Extension.swift */; };
@@ -42,6 +43,7 @@
 		CEFD2D9E21F85D7B00FE5A0A /* ChangingConstraintsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChangingConstraintsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFD2DA221F85D7B00FE5A0A /* ChangingConstraintsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangingConstraintsTests.swift; sourceTree = "<group>"; };
 		CEFD2DA421F85D7B00FE5A0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA48000C28B36F5C009FCC29 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		FA88B3BF28AFFEED00EE90E6 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		FAC0276A28B26C5800AD0CC9 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		FAC0276D28B26ED800AD0CC9 /* NotificationName+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+Extension.swift"; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		CEFD2D8C21F85D7B00FE5A0A /* ChangingConstraints */ = {
 			isa = PBXGroup;
 			children = (
+				FA48000928B36F3C009FCC29 /* Modules */,
 				FAC0276C28B26EC000AD0CC9 /* Extension */,
 				CEFD2D8D21F85D7B00FE5A0A /* AppDelegate.swift */,
 				FAC0276F28B26FA700AD0CC9 /* Utils.swift */,
@@ -110,6 +113,30 @@
 				CEFD2DA421F85D7B00FE5A0A /* Info.plist */,
 			);
 			path = ChangingConstraintsTests;
+			sourceTree = "<group>";
+		};
+		FA48000928B36F3C009FCC29 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FA48000A28B36F43009FCC29 /* Camera */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		FA48000A28B36F43009FCC29 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				FA48000B28B36F4B009FCC29 /* Controller */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		FA48000B28B36F4B009FCC29 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA48000C28B36F5C009FCC29 /* CameraVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		FAC0276C28B26EC000AD0CC9 /* Extension */ = {
@@ -224,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAC0276E28B26ED800AD0CC9 /* NotificationName+Extension.swift in Sources */,
+				FA48000D28B36F5C009FCC29 /* CameraVC.swift in Sources */,
 				CEFD2D9021F85D7B00FE5A0A /* ChangingConstraintsViewController.swift in Sources */,
 				CEFD2D8E21F85D7B00FE5A0A /* AppDelegate.swift in Sources */,
 				FA88B3C028AFFEED00EE90E6 /* MasterViewController.swift in Sources */,
