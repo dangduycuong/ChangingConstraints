@@ -13,6 +13,12 @@
 		CEFD2D9521F85D7B00FE5A0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEFD2D9421F85D7B00FE5A0A /* Assets.xcassets */; };
 		CEFD2D9821F85D7B00FE5A0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFD2D9621F85D7B00FE5A0A /* LaunchScreen.storyboard */; };
 		CEFD2DA321F85D7B00FE5A0A /* ChangingConstraintsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFD2DA221F85D7B00FE5A0A /* ChangingConstraintsTests.swift */; };
+		FA88B3C028AFFEED00EE90E6 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88B3BF28AFFEED00EE90E6 /* MasterViewController.swift */; };
+		FAC0276B28B26C5800AD0CC9 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0276A28B26C5800AD0CC9 /* AlertViewController.swift */; };
+		FAC0276E28B26ED800AD0CC9 /* NotificationName+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0276D28B26ED800AD0CC9 /* NotificationName+Extension.swift */; };
+		FAC0277028B26FA700AD0CC9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0276F28B26FA700AD0CC9 /* Utils.swift */; };
+		FAC0277228B2701400AD0CC9 /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0277128B2701400AD0CC9 /* UIStoryboard+Extension.swift */; };
+		FAC0277428B2703A00AD0CC9 /* IdentifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0277328B2703A00AD0CC9 /* IdentifierView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,12 @@
 		CEFD2D9E21F85D7B00FE5A0A /* ChangingConstraintsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChangingConstraintsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFD2DA221F85D7B00FE5A0A /* ChangingConstraintsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangingConstraintsTests.swift; sourceTree = "<group>"; };
 		CEFD2DA421F85D7B00FE5A0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA88B3BF28AFFEED00EE90E6 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		FAC0276A28B26C5800AD0CC9 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		FAC0276D28B26ED800AD0CC9 /* NotificationName+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+Extension.swift"; sourceTree = "<group>"; };
+		FAC0276F28B26FA700AD0CC9 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		FAC0277128B2701400AD0CC9 /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		FAC0277328B2703A00AD0CC9 /* IdentifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +89,12 @@
 		CEFD2D8C21F85D7B00FE5A0A /* ChangingConstraints */ = {
 			isa = PBXGroup;
 			children = (
+				FAC0276C28B26EC000AD0CC9 /* Extension */,
 				CEFD2D8D21F85D7B00FE5A0A /* AppDelegate.swift */,
+				FAC0276F28B26FA700AD0CC9 /* Utils.swift */,
 				CEFD2D8F21F85D7B00FE5A0A /* ChangingConstraintsViewController.swift */,
+				FA88B3BF28AFFEED00EE90E6 /* MasterViewController.swift */,
+				FAC0276A28B26C5800AD0CC9 /* AlertViewController.swift */,
 				CEFD2D9121F85D7B00FE5A0A /* Main.storyboard */,
 				CEFD2D9421F85D7B00FE5A0A /* Assets.xcassets */,
 				CEFD2D9621F85D7B00FE5A0A /* LaunchScreen.storyboard */,
@@ -94,6 +110,16 @@
 				CEFD2DA421F85D7B00FE5A0A /* Info.plist */,
 			);
 			path = ChangingConstraintsTests;
+			sourceTree = "<group>";
+		};
+		FAC0276C28B26EC000AD0CC9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FAC0276D28B26ED800AD0CC9 /* NotificationName+Extension.swift */,
+				FAC0277128B2701400AD0CC9 /* UIStoryboard+Extension.swift */,
+				FAC0277328B2703A00AD0CC9 /* IdentifierView.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +223,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC0276E28B26ED800AD0CC9 /* NotificationName+Extension.swift in Sources */,
 				CEFD2D9021F85D7B00FE5A0A /* ChangingConstraintsViewController.swift in Sources */,
 				CEFD2D8E21F85D7B00FE5A0A /* AppDelegate.swift in Sources */,
+				FA88B3C028AFFEED00EE90E6 /* MasterViewController.swift in Sources */,
+				FAC0276B28B26C5800AD0CC9 /* AlertViewController.swift in Sources */,
+				FAC0277428B2703A00AD0CC9 /* IdentifierView.swift in Sources */,
+				FAC0277028B26FA700AD0CC9 /* Utils.swift in Sources */,
+				FAC0277228B2701400AD0CC9 /* UIStoryboard+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LW34R6CMB;
 				INFOPLIST_FILE = ChangingConstraints/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -378,6 +411,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LW34R6CMB;
 				INFOPLIST_FILE = ChangingConstraints/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

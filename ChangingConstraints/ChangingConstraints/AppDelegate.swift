@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Network
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        checkNetworkState()
         return true
     }
 
@@ -40,7 +42,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    func checkNetworkState() {
+        let monitor = NWPathMonitor()
+        let queue = DispatchQueue(label: "Monitor")
+        monitor.start(queue: queue)
+        monitor.pathUpdateHandler = { path in
+            if path.status == .satisfied {
+                NotificationCenter.default.post(name: .networkStateChange, object: nil, userInfo: ["isOn": true])
+            } else {
+                NotificationCenter.default.post(name: .networkStateChange, object: nil, userInfo: ["isOn": false])
+            }
+        }
+    }
 
 }
 
