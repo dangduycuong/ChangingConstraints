@@ -15,6 +15,9 @@ class PersionModel {
 
 class MasterViewController: UIViewController {
     
+    @IBOutlet weak var captureView: UIView!
+    @IBOutlet weak var cameraButton: UIButton!
+    
     var listPerson = [PersionModel]()
     var detail = PersionModel()
     
@@ -32,6 +35,20 @@ class MasterViewController: UIViewController {
         if let s = UserDefaults.standard.string(forKey: "okok") as? String {
             title = s
         }
+        cameraButton.setTitle("", for: .normal)
+        
+                DispatchQueue.main.async {
+                    guard self.captureView.layer.animation(forKey: "pulse") == nil else {
+                        return
+                    }
+                    let pulseAnimation = CABasicAnimation(keyPath: "opacity")
+                    pulseAnimation.duration = 0.1
+                    pulseAnimation.repeatCount = .greatestFiniteMagnitude
+                    pulseAnimation.autoreverses = true
+                    pulseAnimation.fromValue = 1
+                    pulseAnimation.toValue = 0
+                    self.cameraButton.layer.add(pulseAnimation, forKey: "pulse")
+                }
     }
     
     
@@ -44,6 +61,19 @@ class MasterViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
+    
+    //        DispatchQueue.main.async {
+    //            guard self.captureView.layer.animation(forKey: "pulse") == nil else {
+    //                return
+    //            }
+    //            let pulseAnimation = CABasicAnimation(keyPath: "opacity")
+    //            pulseAnimation.duration = 0.1
+    //            pulseAnimation.repeatCount = .greatestFiniteMagnitude
+    //            pulseAnimation.autoreverses = true
+    //            pulseAnimation.fromValue = 1
+    //            pulseAnimation.toValue = 0
+    //            self.cameraButton.layer.add(pulseAnimation, forKey: "pulse")
+    //        }
     
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         #if DEBUG

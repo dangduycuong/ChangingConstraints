@@ -11,24 +11,30 @@ class ViewController: UIViewController {
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var meowButton: UIButton!
     
-    var phoneNumber: String = ""
+    var phoneNumber: String = "1"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         phoneTextField.delegate = self
-//        meowButton.setTitle("", for: .normal)
     }
     
     @IBAction func meowClicked(_ sender: Any) {
         view.endEditing(true)
-        if let url = URL(string: "myphotoapp:Vacation?index=\(phoneNumber)") {
-            UIApplication.shared.open(url) { (result) in
-                if result {
-                    // The URL was delivered successfully!
-                    print("---- mo ra duoc roi", self.phoneNumber)
-                }
+        if let url = URL(string: "ongchaudaydi:vmo?dev=cuongios") {
+            UIApplication.shared.open(url) { result in
+                
             }
         }
+        
+        
+//        if let url = URL(string: "myphotoapp:Vacation?index=\(phoneNumber)") {
+//            UIApplication.shared.open(url) { (result) in
+//                if result {
+//                    // The URL was delivered successfully!
+//                    print("---- mo ra duoc roi", self.phoneNumber)
+//                }
+//            }
+//        }
     }
     
 }
